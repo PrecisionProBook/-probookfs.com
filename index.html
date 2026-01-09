@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Precision ProBook Financial Solutions</title>
+  <title>Precision Pro Book Financial Solutions</title>
 
   <style>
     * {
@@ -198,14 +198,43 @@
       transform: translateY(0);
     }
 
-    /* MOBILE */
+    /* MOBILE FIXES — SERVICES & LAYOUT */
     @media (max-width: 768px) {
+
+      section {
+        min-height: auto;
+        padding: 90px 20px 70px;
+      }
+
       h1 {
         font-size: 28px;
       }
 
       .overlay {
         padding: 50px 25px;
+      }
+
+      .services {
+        padding-top: 80px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 35px;
+      }
+
+      .card {
+        padding: 26px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      }
+
+      .card h3 {
+        font-size: 20px;
+      }
+
+      .service-list span {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -283,29 +312,14 @@
   <p>Connect with us on your preferred platform.</p>
 
   <div class="chat-icons">
-    <a
-  href="https://wa.me/14317911305"
-  target="_blank"
-  aria-label="WhatsApp Chat"
->
-  <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg">
-</a>
-    <a
-  href="https://t.me/probookfinancialsolutions"
-  target="_blank"
-  aria-label="Telegram Chat"
->
-  <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg">
-</a>
-    <a
-  href="https://www.instagram.com/probookfinancialsolutions/"
-  target="_blank"
-  aria-label="Instagram Message"
->
-  <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg">
-</a>
-    <a href="https://www.facebook.com/share/1AgTzCeDRp/?mibextid=wwXIfr" target="_blank" aria-label="Messenger">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-square.svg">
+    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg">
+    </a>
+    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg">
     </a>
     <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
       <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg">

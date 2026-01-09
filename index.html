@@ -52,12 +52,12 @@
       text-align: center;
     }
 
-   .hero {
-  background-image: url("pexels-anna-nekrashevich-8534373.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    .hero {
+      background-image: url("pexels-anna-nekrashevich-8534373.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     .overlay {
       background: rgba(255, 255, 255, 0.9);
@@ -109,8 +109,6 @@
 
     .service-list {
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
     .service-list li {
@@ -159,34 +157,33 @@
       padding: 80px 20px;
     }
 
+    /* SOCIAL ICONS — PROFESSIONAL & MINIMAL */
     .chat-icons {
-      margin-top: 30px;
+      margin-top: 35px;
       display: flex;
-      gap: 25px;
+      gap: 28px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .chat-icons a {
       display: flex;
-      justify-content: center;
       align-items: center;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: #f5ede0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .chat-icons a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      opacity: 0.6;
+      transform: translateY(-2px);
     }
 
     .chat-icons img {
-      width: 40px;
-      filter: invert(75%) sepia(40%) saturate(500%) hue-rotate(20deg) brightness(1.1) contrast(0.9);
+      width: 22px;
+      height: 22px;
+      filter: grayscale(100%) brightness(0.2);
     }
 
     /* ANIMATIONS */
@@ -286,23 +283,23 @@
   <p>Connect with us on your preferred platform.</p>
 
   <div class="chat-icons">
-    <a href="https://wa.me/14317911305" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png">
+    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg">
     </a>
-    <a href="https://t.me/14317911305" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/telegram-app.png">
+    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg">
     </a>
-    <a href="https://www.instagram.com/" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png">
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg">
     </a>
-    <a href="https://www.facebook.com/share/1AgTzCeDRp/?mibextid=wwXIfr" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/facebook-messenger.png">
+    <a href="https://www.facebook.com/share/1AgTzCeDRp/?mibextid=wwXIfr" target="_blank" aria-label="Messenger">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-square.svg">
     </a>
-    <a href="mailto:ppbfinancialsolutionsinc@gmail.com">
-      <img src="https://img.icons8.com/ios-filled/50/000000/email.png">
+    <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg">
     </a>
-    <a href="tel:+14317911305">
-      <img src="https://img.icons8.com/ios-filled/50/000000/phone.png">
+    <a href="tel:+14317911305" aria-label="Phone">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg">
     </a>
   </div>
 </section>

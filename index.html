@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Precision Pro Book Financial Solutions</title>
+  <meta name="description" content="Precision Pro Book Financial Solutions provides reliable accounting, bookkeeping, and tax services for individuals and businesses.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
     * {
@@ -42,6 +44,10 @@
       letter-spacing: 0.3px;
     }
 
+    nav a:hover {
+      color: #1f1f1f;
+    }
+
     /* SECTIONS */
     section {
       min-height: 100vh;
@@ -50,6 +56,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      scroll-margin-top: 100px; /* fixes fixed header overlap */
     }
 
     .hero {
@@ -99,6 +106,12 @@
       border-radius: 10px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.08);
       text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(0,0,0,0.12);
     }
 
     .card h3 {
@@ -128,26 +141,17 @@
       font-size: 0.95rem;
     }
 
-    /* CTA */
+    /* ABOUT US */
     .cta {
       background: #1f1f1f;
       color: white;
       flex-direction: column;
+      padding: 120px 20px 80px;
     }
 
     .cta p {
       color: #ddd;
-    }
-
-    .cta a {
-      margin-top: 30px;
-      padding: 15px 36px;
-      background: white;
-      color: #1f1f1f;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+      margin-bottom: 16px;
     }
 
     /* CONTACT */
@@ -157,7 +161,7 @@
       padding: 80px 20px;
     }
 
-    /* SOCIAL ICONS — PROFESSIONAL & MINIMAL */
+    /* SOCIAL ICONS */
     .chat-icons {
       margin-top: 35px;
       display: flex;
@@ -198,9 +202,8 @@
       transform: translateY(0);
     }
 
-    /* MOBILE FIXES — SERVICES & LAYOUT */
+    /* MOBILE FIXES */
     @media (max-width: 768px) {
-
       section {
         min-height: auto;
         padding: 90px 20px 70px;
@@ -236,6 +239,10 @@
       .service-list span {
         font-size: 0.9rem;
       }
+
+      .cta {
+        padding: 80px 20px;
+      }
     }
   </style>
 </head>
@@ -246,6 +253,7 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
+    <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -299,11 +307,19 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta fade-up">
-  <h1>Schedule Your Appointment</h1>
-  <p>Select the service you need and book your consultation.</p>
-  <a href="#contact">Select Appointment</a>
+<!-- ABOUT US -->
+<section id="about" class="cta fade-up">
+  <h1>About Us</h1>
+  <p>
+    At Precision Pro Book Financial Solutions, we are dedicated to delivering 
+    accurate and reliable financial services for individuals and businesses. 
+    With years of experience in accounting, bookkeeping, and tax planning, 
+    our team ensures clarity, compliance, and peace of mind for all our clients.
+  </p>
+  <p>
+    We value integrity, precision, and personalized service, helping you make 
+    informed financial decisions and achieve your goals with confidence.
+  </p>
 </section>
 
 <!-- CONTACT -->
@@ -313,19 +329,19 @@
 
   <div class="chat-icons">
     <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp Icon">
     </a>
     <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram Icon">
     </a>
     <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg" alt="Instagram Icon">
     </a>
     <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email Icon">
     </a>
     <a href="tel:+14317911305" aria-label="Phone">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone Icon">
     </a>
   </div>
 </section>
@@ -339,7 +355,8 @@
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll(".fade-up").forEach(el => {
+  document.querySelectorAll(".fade-up").forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.2}s`; // stagger effect
     observer.observe(el);
   });
 </script>

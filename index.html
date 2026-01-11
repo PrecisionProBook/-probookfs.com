@@ -56,7 +56,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      scroll-margin-top: 100px; /* fixes fixed header overlap */
+      scroll-margin-top: 100px;
     }
 
     .hero {
@@ -190,6 +190,12 @@
       filter: grayscale(100%) brightness(0.2);
     }
 
+    /* FIX INSTAGRAM ICON ONLY */
+    .instagram {
+      transform: scale(0.88);
+      transform-origin: center;
+    }
+
     /* ANIMATIONS */
     .fade-up {
       opacity: 0;
@@ -202,7 +208,7 @@
       transform: translateY(0);
     }
 
-    /* MOBILE FIXES */
+    /* MOBILE */
     @media (max-width: 768px) {
       section {
         min-height: auto;
@@ -261,7 +267,7 @@
 <!-- HERO -->
 <section id="home" class="hero">
   <div class="overlay fade-up">
-    <h1>Precision Pro Book Financial Solutions</h1>
+    <h1>Precision ProBook Financial Solutions</h1>
     <p>
       Reliable, accurate, and refined accounting support for individuals and
       businesses that value precision and clarity.
@@ -307,18 +313,12 @@
   </div>
 </section>
 
-<!-- ABOUT US -->
+<!-- ABOUT -->
 <section id="about" class="cta fade-up">
   <h1>About Us</h1>
   <p>
-    At Precision Pro Book Financial Solutions, we are dedicated to delivering 
-    accurate and reliable financial services for individuals and businesses. 
-    With years of experience in accounting, bookkeeping, and tax planning, 
-    our team ensures clarity, compliance, and peace of mind for all our clients.
-  </p>
-  <p>
-    We value integrity, precision, and personalized service, helping you make 
-    informed financial decisions and achieve your goals with confidence.
+    At Precision ProBook Financial Solutions, we are dedicated to delivering 
+    accurate and reliable financial services for individuals and businesses.
   </p>
 </section>
 
@@ -328,20 +328,20 @@
   <p>Connect with us on your preferred platform.</p>
 
   <div class="chat-icons">
-    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp Icon">
+    <a href="https://wa.me/14317911305" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp">
     </a>
-    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram Icon">
+    <a href="https://t.me/14317911305" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram">
     </a>
-   <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank" rel="noopener noreferrer">
-  <img src="assets/instagram.svg" alt="Instagram">
+    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank">
+      <img src="./assets/instagram.svg" alt="Instagram" class="instagram">
     </a>
-    <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email Icon">
+    <a href="mailto:ppbfinancialsolutionsinc@gmail.com">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email">
     </a>
-    <a href="tel:+14317911305" aria-label="Phone">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone Icon">
+    <a href="tel:+14317911305">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone">
     </a>
   </div>
 </section>
@@ -356,7 +356,7 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll(".fade-up").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.2}s`; // stagger effect
+    el.style.transitionDelay = `${i * 0.2}s`;
     observer.observe(el);
   });
 </script>

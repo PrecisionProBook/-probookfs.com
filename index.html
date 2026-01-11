@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Precision ProBook Financial Solutions</title>
-  <meta name="description" content="Precision ProBook Financial Solutions provides reliable accounting, bookkeeping, and tax services for individuals and businesses.">
+  <title>Precision Pro Book Financial Solutions</title>
+  <meta name="description" content="Precision Pro Book Financial Solutions provides reliable accounting, bookkeeping, and tax services for individuals and businesses.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
@@ -56,7 +56,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      scroll-margin-top: 100px;
+      scroll-margin-top: 100px; /* fixes fixed header overlap */
     }
 
     .hero {
@@ -190,10 +190,10 @@
       filter: grayscale(100%) brightness(0.2);
     }
 
-    /* FIX INSTAGRAM ICON ONLY */
-    .instagram {
-      transform: scale(0.88);
-      transform-origin: center;
+    /* Shrunk Instagram specifically */
+    .chat-icons a.instagram img {
+      width: 18px;
+      height: 18px;
     }
 
     /* ANIMATIONS */
@@ -208,7 +208,7 @@
       transform: translateY(0);
     }
 
-    /* MOBILE */
+    /* MOBILE FIXES */
     @media (max-width: 768px) {
       section {
         min-height: auto;
@@ -313,12 +313,18 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT US -->
 <section id="about" class="cta fade-up">
   <h1>About Us</h1>
   <p>
-    At Precision ProBook Financial Solutions, we are dedicated to delivering 
-    accurate and reliable financial services for individuals and businesses.
+    At Precision Pro Book Financial Solutions, we are dedicated to delivering 
+    accurate and reliable financial services for individuals and businesses. 
+    With years of experience in accounting, bookkeeping, and tax planning, 
+    our team ensures clarity, compliance, and peace of mind for all our clients.
+  </p>
+  <p>
+    We value integrity, precision, and personalized service, helping you make 
+    informed financial decisions and achieve your goals with confidence.
   </p>
 </section>
 
@@ -328,20 +334,20 @@
   <p>Connect with us on your preferred platform.</p>
 
   <div class="chat-icons">
-    <a href="https://wa.me/14317911305" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp">
+    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp Icon">
     </a>
-    <a href="https://t.me/14317911305" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram">
+    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram Icon">
     </a>
-    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank">
-      <img src="./assets/instagram.svg" alt="Instagram" class="instagram">
+    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank" aria-label="Instagram" class="instagram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg" alt="Instagram Icon">
     </a>
-    <a href="mailto:ppbfinancialsolutionsinc@gmail.com">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email">
+    <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email Icon">
     </a>
-    <a href="tel:+14317911305">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone">
+    <a href="tel:+14317911305" aria-label="Phone">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone Icon">
     </a>
   </div>
 </section>
@@ -356,7 +362,7 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll(".fade-up").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.2}s`;
+    el.style.transitionDelay = `${i * 0.2}s`; // stagger effect
     observer.observe(el);
   });
 </script>

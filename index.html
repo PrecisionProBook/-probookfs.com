@@ -56,7 +56,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      scroll-margin-top: 100px;
+      scroll-margin-top: 100px; /* fixes fixed header overlap */
     }
 
     .hero {
@@ -190,6 +190,7 @@
       filter: grayscale(100%) brightness(0.2);
     }
 
+    /* Shrunk Instagram specifically */
     .chat-icons a.instagram img {
       width: 18px;
       height: 18px;
@@ -280,37 +281,34 @@
     <h1>Our Services</h1>
 
     <div class="cards">
-
       <div class="card fade-up">
-        <h3>Bookkeeping Services</h3>
+        <h3>Personal Income Tax</h3>
         <ul class="service-list">
-          <li><strong>Full-Cycle Bookkeeping</strong><span>Transaction recording, expense categorization, and general ledger maintenance.</span></li>
-          <li><strong>Accounts Payable & Receivable</strong><span>Vendor bill tracking, invoicing, customer statements, and cash flow support.</span></li>
-          <li><strong>Bank & Credit Card Reconciliations</strong><span>Monthly reconciliations to ensure accuracy and detect discrepancies.</span></li>
-          <li><strong>Payroll Administration</strong><span>Payroll processing, source deductions, remittances, and T4/T4A preparation.</span></li>
+          <li><strong>Personal Income Tax Filing</strong><span>Single and family returns, including dependants, spousal credits, and eligible deductions.</span></li>
+          <li><strong>Self-Employed & Contractor Returns</strong><span>Tax filing for freelancers, sole proprietors, and gig workers with expense tracking and business-use deductions.</span></li>
+          <li><strong>Tax Optimization & CRA Compliance</strong><span>Strategic review of income, deductions, and credits to minimize tax liability while staying fully compliant.</span></li>
         </ul>
       </div>
 
       <div class="card fade-up">
-        <h3>Tax Preparation Services</h3>
+        <h3>Corporate Income Tax</h3>
         <ul class="service-list">
-          <li><strong>Personal Income Tax (T1)</strong><span>Individual, family, self-employed, and contractor tax returns.</span></li>
-          <li><strong>Corporate Income Tax (T2)</strong><span>Preparation of corporate tax returns and required schedules.</span></li>
-          <li><strong>GST / PST Filings</strong><span>Sales tax calculation, filing, and compliance support.</span></li>
-          <li><strong>CRA Correspondence Support</strong><span>Assistance responding to CRA requests related to filed returns.</span></li>
+          <li><strong>Corporate Tax (T2) Filing</strong><span>Accurate preparation and submission of corporate returns with all required schedules.</span></li>
+          <li><strong>GST / PST Filing & Compliance</strong><span>Registration, calculation, and timely filing of sales taxes aligned with CRA requirements.</span></li>
+          <li><strong>Business Setup & Tax Structuring</strong><span>Guidance on registration, corporate structure, and tax planning from day one.</span></li>
+          <li><strong>Strategic Corporate Tax Planning</strong><span>Ongoing advisory to manage tax exposure, cash flow, and future growth.</span></li>
         </ul>
       </div>
 
       <div class="card fade-up">
-        <h3>Financial Reporting & Advisory</h3>
+        <h3>Bookkeeping</h3>
         <ul class="service-list">
-          <li><strong>Management Financial Reports</strong><span>Internal income statements, balance sheets, and cash flow reports.</span></li>
-          <li><strong>Budgeting & Cash Flow Forecasting</strong><span>Planning tools to support informed business decisions.</span></li>
-          <li><strong>Bookkeeping Cleanup & Catch-Up</strong><span>Historical corrections, system cleanup, and year-end preparation.</span></li>
-          <li><strong>Software Setup & Support</strong><span>Accounting system setup, training, and optimization.</span></li>
+          <li><strong>Full-Cycle Bookkeeping</strong><span>Transaction recording, expense categorization, and financial reporting.</span></li>
+          <li><strong>Account Reconciliations</strong><span>Monthly bank, credit card, and ledger reconciliations to ensure accuracy.</span></li>
+          <li><strong>Payroll Processing</strong><span>Payroll calculations and preparation of T4, T4A, and T5018 slips.</span></li>
+          <li><strong>Source Deduction Remittances</strong><span>CPP, EI, and income tax calculations with timely CRA submissions.</span></li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
@@ -321,12 +319,12 @@
   <p>
     At Precision Pro Book Financial Solutions, we are dedicated to delivering 
     accurate and reliable financial services for individuals and businesses. 
-    With years of experience in bookkeeping and tax preparation, 
-    our team ensures clarity, compliance, and peace of mind.
+    With years of experience in accounting, bookkeeping, and tax planning, 
+    our team ensures clarity, compliance, and peace of mind for all our clients.
   </p>
   <p>
     We value integrity, precision, and personalized service, helping you make 
-    informed financial decisions with confidence.
+    informed financial decisions and achieve your goals with confidence.
   </p>
 </section>
 
@@ -336,20 +334,20 @@
   <p>Connect with us on your preferred platform.</p>
 
   <div class="chat-icons">
-    <a href="https://wa.me/14317911305" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp">
+    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp Icon">
     </a>
-    <a href="https://t.me/14317911305" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram">
+    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram Icon">
     </a>
-    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank" class="instagram">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg" alt="Instagram">
+    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank" aria-label="Instagram" class="instagram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg" alt="Instagram Icon">
     </a>
-    <a href="mailto:ppbfinancialsolutionsinc@gmail.com">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email">
+    <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email Icon">
     </a>
-    <a href="tel:+14317911305">
-      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone">
+    <a href="tel:+14317911305" aria-label="Phone">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone Icon">
     </a>
   </div>
 </section>
@@ -364,7 +362,7 @@
   }, { threshold: 0.15 });
 
   document.querySelectorAll(".fade-up").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.2}s`;
+    el.style.transitionDelay = `${i * 0.2}s`; // stagger effect
     observer.observe(el);
   });
 </script>

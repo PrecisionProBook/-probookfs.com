@@ -21,6 +21,7 @@
       color: #222;
     }
 
+    /* NAVIGATION */
     header {
       position: fixed;
       top: 0;
@@ -43,6 +44,7 @@
       letter-spacing: 0.3px;
     }
 
+    /* SECTIONS */
     section {
       min-height: 100vh;
       padding: 120px 20px 80px;
@@ -79,6 +81,7 @@
       color: #444;
     }
 
+    /* SERVICES */
     .services {
       background: #f6f6f6;
       flex-direction: column;
@@ -99,12 +102,6 @@
       border-radius: 10px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.08);
       text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 22px 48px rgba(0,0,0,0.12);
     }
 
     .card h3 {
@@ -119,14 +116,12 @@
 
     .service-list li {
       margin-bottom: 15px;
-      line-height: 1.5;
     }
 
     .service-list strong {
       display: block;
       font-weight: 600;
       color: #111;
-      margin-bottom: 0.25rem;
     }
 
     .service-list span {
@@ -134,18 +129,20 @@
       font-size: 0.95rem;
     }
 
+    /* ABOUT */
     .cta {
       background: #1f1f1f;
       color: white;
       flex-direction: column;
-      padding: 120px 20px 80px;
     }
 
     .cta p {
       color: #ddd;
       margin-bottom: 16px;
+      max-width: 700px;
     }
 
+    /* CONTACT */
     .contact {
       flex-direction: column;
       background: #fef9f3;
@@ -180,6 +177,12 @@
       filter: grayscale(100%) brightness(0.2);
     }
 
+    .chat-icons a.instagram img {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ANIMATIONS */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -189,25 +192,6 @@
     .fade-up.show {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    @media (max-width: 768px) {
-      section {
-        min-height: auto;
-        padding: 90px 20px 70px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      .overlay {
-        padding: 50px 25px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -223,6 +207,7 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
   <div class="overlay fade-up">
     <h1>Precision ProBook Financial Solutions</h1>
@@ -230,6 +215,7 @@
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="services">
   <div class="fade-up">
     <h1>Our Services</h1>
@@ -239,10 +225,10 @@
       <div class="card fade-up">
         <h3>Personal Income Tax</h3>
         <ul class="service-list">
-          <li><strong>Comprehensive Tax Filing</strong><span>Preparation and filing of personal income tax returns for individuals and families.</span></li>
-          <li><strong>Self-Employed & Business Income</strong><span>Returns for self-employed individuals and small business activities.</span></li>
-          <li><strong>Deductions & Credits</strong><span>Accurate reporting of eligible deductions and credits.</span></li>
-          <li><strong>Supporting Documentation</strong><span>Organized schedules and records to support all income types.</span></li>
+          <li><strong>Comprehensive Tax Filing</strong><span>Preparation and filing of personal income tax returns.</span></li>
+          <li><strong>Self-Employed & Business Income</strong><span>Returns for self-employed individuals.</span></li>
+          <li><strong>Deductions & Credits</strong><span>Accurate reporting of eligible deductions.</span></li>
+          <li><strong>Supporting Documentation</strong><span>Organized tax schedules.</span></li>
         </ul>
       </div>
 
@@ -250,20 +236,20 @@
         <h3>Corporate Tax</h3>
         <ul class="service-list">
           <li><strong>T2 Corporate Tax Filing</strong><span>Preparation and filing of corporate tax returns.</span></li>
-          <li><strong>Payroll Remittances</strong><span>Processing payroll including T4 slips and source deductions.</span></li>
-          <li><strong>GST/HST Returns</strong><span>Preparation and filing of sales tax returns.</span></li>
-          <li><strong>Business Types Supported</strong><span>Corporations, partnerships, and proprietorships.</span></li>
+          <li><strong>Payroll Remittances</strong><span>Payroll processing including T4 slips.</span></li>
+          <li><strong>GST/HST Returns</strong><span>Sales tax preparation.</span></li>
+          <li><strong>Business Types Supported</strong><span>Corporations, partnerships, proprietorships.</span></li>
         </ul>
       </div>
 
       <div class="card fade-up">
         <h3>Full-Cycle Bookkeeping</h3>
         <ul class="service-list">
-          <li><strong>Transaction Recording</strong><span>Recording, categorization, and reconciliation of transactions.</span></li>
-          <li><strong>Accounts Management</strong><span>Accounts payable and receivable management.</span></li>
-          <li><strong>Bank & Credit Reconciliations</strong><span>Regular reconciliation of all accounts.</span></li>
-          <li><strong>Payroll Processing</strong><span>Payroll preparation including T4, T4A, and T5018 slips.</span></li>
-          <li><strong>Financial Records</strong><span>Organized records to support tax preparation.</span></li>
+          <li><strong>Transaction Recording</strong><span>Daily transaction recording and reconciliation.</span></li>
+          <li><strong>Accounts Management</strong><span>AP & AR management.</span></li>
+          <li><strong>Bank Reconciliations</strong><span>Bank and credit card reconciliations.</span></li>
+          <li><strong>Payroll Processing</strong><span>T4, T4A, and T5018 slips.</span></li>
+          <li><strong>Financial Records</strong><span>Clean records for tax preparation.</span></li>
         </ul>
       </div>
 
@@ -271,14 +257,41 @@
   </div>
 </section>
 
+<!-- ABOUT US -->
 <section id="about" class="cta fade-up">
   <h1>About Us</h1>
-  <p>We deliver accurate and reliable bookkeeping and tax services with clarity and precision.</p>
+  <p>
+    At Precision Pro Book Financial Solutions, we are dedicated to delivering
+    accurate and reliable financial services for individuals, families, and businesses.
+  </p>
+  <p>
+    We value integrity, accuracy, and personalized service, helping you maintain
+    organized financial records and meet your filing needs with confidence.
+  </p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact fade-up">
   <h1>Contact Us</h1>
   <p>Connect with us on your preferred platform.</p>
+
+  <div class="chat-icons">
+    <a href="https://wa.me/14317911305" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/message-circle.svg" alt="WhatsApp">
+    </a>
+    <a href="https://t.me/14317911305" target="_blank" aria-label="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/send.svg" alt="Telegram">
+    </a>
+    <a href="https://www.instagram.com/probookfinancialsolutions/" target="_blank" aria-label="Instagram" class="instagram">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="mailto:ppbfinancialsolutionsinc@gmail.com" aria-label="Email">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg" alt="Email">
+    </a>
+    <a href="tel:+14317911305" aria-label="Phone">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/phone.svg" alt="Phone">
+    </a>
+  </div>
 </section>
 
 <script>
